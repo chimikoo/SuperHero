@@ -38,8 +38,7 @@ Once we align on the vision, we would break tasks into manageable pieces and sta
 
 # Future Enhancements
 
-If I Had More Time
-If I had more time, I would:
+ **If I had more time, I would:**
 
 - Implement additional backend checks to prevent duplicate superheroes.
 - Expand the frontend to allow users to click on a superhero for more details, such as their weapon, real name, and backstory.
