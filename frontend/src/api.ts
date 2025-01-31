@@ -4,10 +4,12 @@ export type Superhero = {
     humilityScore: number;
   };
   
-  const API_URL = "http://localhost:3000/superheroes"; 
-  
+  const API_URL = "http://localhost:3000/superheroes";
+
   export const fetchSuperheroes = async (): Promise<Superhero[]> => {
-    const response = await fetch(API_URL);
+    const response = await fetch(API_URL, {
+      credentials: 'same-origin',
+    });
     if (!response.ok) throw new Error("Failed to fetch superheroes");
     return response.json();
   };
@@ -17,7 +19,9 @@ export type Superhero = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(hero),
+      credentials: 'same-origin',
     });
     if (!response.ok) throw new Error("Failed to add superhero");
   };
+  
   
